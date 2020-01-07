@@ -8,8 +8,14 @@ int main(){
 	
 	string name[N];
 	int age[N];
-	cout << "Name of student = ";
-	cout << "Age of student = ";
+
+	for (short i = 0; i < N; i++) {
+		cout << "Name of student " << i+1 << " = ";
+		cin >> name[i];
+		cout << "Age of student " << i+1 << " = ";
+		cin >> age[i];
+	}
+	
 	
 	int key;
 	cout << "--------------------------------------\n";
@@ -17,7 +23,10 @@ int main(){
 	cin >> key;
 	cout << "--------------------------------------\n";
 	
-
+	for (short i = 0; i < N; i++) {
+		if (age[i] == key)
+			cout << name[i] << endl;
+	}
 	
 	cout << "--------------------------------------\n";
 	
